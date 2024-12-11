@@ -1,0 +1,99 @@
+Locators:
+ 1.id
+ 2.className
+ 3.name
+ 4.tagName
+ 5.linkText
+ 6.partialLinkText
+ 7.x-Path
+ 8.css Selector
+
+ not to use:
+   --->attributes with alphanumeric or zigzag words.
+
+ syntax of x-Path:
+
+    -//tagName[@attribute = " value "]
+
+ id:
+ //tagName[@id="value"]
+
+ className:
+ //tagName[@class="value"]
+
+ name:
+   used in svg elements.
+
+   methods/functions in x-path:
+   text():
+   //tagName[text()="value"]
+
+   contains():
+   //tagName[contains(@attribute="value")]
+   //tagName[contains(text(),'value')] -- for text() function
+
+   starts-with():
+   //tagName[starts-with(@attribute,'value,)]
+
+   normalize-space():
+   //tagName[normalize-space()="value"]
+
+   conditions:
+   And:
+   //tagName[@attribute="value" and @attribute="value"]
+   Or:
+   //tagName[@attribute="value" or @attribute="value"]
+
+   Indexing or multiple/list of web elements:
+   [//tagName(@attribute="value"][1]
+   ---> x-path index starts with 1.
+
+
+   syntax of cssSelector:
+
+    - tagName[attribute='value']
+
+    id:
+    tagName[attribute='value']
+    #id-value --- used for unique id
+
+    class:
+    .class-name
+
+    methods/functions in css selector:
+
+    starts-with():
+    tagName[attribute^="value"]
+
+    ends-with():
+    tagName[attribute$="value"]
+
+    contains():
+    tagName[attribute*="value"]
+
+
+    conditions:
+
+    And:
+    tagName[attribute="value"][attribute="value"]
+
+    Or:
+    tagName[attribute="value"],[attribute="value"]
+
+ Axes:
+ --parent
+ --child
+ --GrandParent-->ancestor
+ --GrandChild-->descendant
+ --Siblings
+ -->followingSibling
+ -->precedingSibling
+
+  -- In x-path both following and preceding siblings are used.
+  Ex: tagName[@attribute='value']/following-sibling :: tagName
+      tagName[@attribute='value']/preceding-sibling :: tagName
+
+  -- In css selector following sibling only preferred.
+  Ex: tagName[attribute='value']>child>child (or) tagName[attribute='value'] child child
+       - >(greaterThanSymbol) or give space.
+       tagName[attribute='value']+tagName
