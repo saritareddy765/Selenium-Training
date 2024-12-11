@@ -1,0 +1,26 @@
+https://www.saucedemo.com
+
+id:
+-->input[id="user-name"]
+-->input[id="password"]
+
+className:
+-->input[class*="input"]
+
+starts-with():
+-->input[id^="user"]
+
+ends-with();
+-->span[class$="msg"]
+
+contains():
+-->input[class*="submit"]
+
+conditions:
+-And:
+-->input[id="user-name" ][type="text"]
+-Or:
+-->input[id="password" ],[type="password"]
+
+forward-sibling:
+-->div[class="form_group"]>input

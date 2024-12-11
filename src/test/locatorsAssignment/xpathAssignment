@@ -1,0 +1,33 @@
+https://www.saucedemo.com
+
+id:
+-->//input[@id="user-name"]
+-->//input[@id="password"]
+
+className:
+-->//input[normalize-space(@class="input")]
+
+text():
+-->//div[text()="Swag Labs"]
+
+starts-with():
+-->//input[starts-with(@id,"user")]
+
+contains():
+-->//h4[contains(text(),'Accepted')]  for text()
+-->//input[contains(@name,"user")] for attribute
+
+conditions:
+ - And:
+-->//input[@id="user-name" and @type="text"]
+ - Or:
+-->//input[@id="password" or @type="password"]
+
+Indexing
+-->(//div[@class='inventory_item'])[5]
+
+forward-sibling:
+-->//div[@class='form_group']/following-sibling::input[@type='submit']
+
+preceding-sibling:
+-->//div[@class='form_group']/preceding-sibling::div
