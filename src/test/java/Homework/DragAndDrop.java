@@ -18,6 +18,7 @@ public class DragAndDrop {
         WebElement rightSide = driver.findElement(By.cssSelector("#column-b"));
         Actions actions = new Actions(driver);
         actions.dragAndDrop(leftSide,rightSide).build().perform();
+        //actions.dragAndDrop(rightSide,leftSide).build().perform();
     }
     @AfterTest
     public void killsession(){
