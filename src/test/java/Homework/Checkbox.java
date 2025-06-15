@@ -14,6 +14,7 @@ public class Checkbox {
         driver.navigate().to("https://www.salesforce.com/in/form/signup/freetrial-sales/?d=topnav2-btn-ft");
         WebElement Checkbox = driver.findElement(By.xpath("//div[starts-with(@id,'SubscriptionAgreement')]/preceding-sibling::div"));
         ////input[@id='SubscriptionAgreement']/following-sibling::div[@class='checkbox-ui']
+        ////div[@class='msaCheckbox checkboxInput section']//div[@class='checkbox-ui']
         System.out.println(driver.findElement(By.cssSelector("#SubscriptionAgreement")).isSelected());
         WebElement Checkbox1 = driver.findElement(By.xpath("//div[starts-with(@id,'SubscriptionAgreement')]/preceding-sibling::div"));
         Checkbox1.click();

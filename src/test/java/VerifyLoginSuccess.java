@@ -21,7 +21,7 @@ public class VerifyLoginSuccess {
 
         String errorMessage = driver.findElement(By.tagName("h3")).getText();
         System.out.println(errorMessage);
-        Assert.assertEquals(errorMessage, "sadface: username and password do not match any user in this service");
+        Assert.assertEquals(errorMessage, "Epic sadface: Username and password do not match any user in this service");
     }
     @AfterTest
     public void killsection(){

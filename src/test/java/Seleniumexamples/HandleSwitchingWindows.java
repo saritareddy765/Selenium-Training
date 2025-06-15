@@ -23,7 +23,7 @@ public class HandleSwitchingWindows extends BaseSelenium {
         System.out.println("allWindowsId :: " + allWindowsIds);
 
         for (String window: allWindowsIds){
-            driver.switchTo().window(window);
+            driver.switchTo().window(window);//switching window to 2nd
         }
         Thread.sleep(3000);
         WebElement newWindowText = driver.findElement(By.tagName("h3"));

@@ -1,0 +1,17 @@
+About hidden dropdown list
+setTime(()=>{debugger},5000)->in console after enter in console
+click on application to freeze screen
+
+ WebElement userName = driver.findElement(By.xpath("//div[text()='demouser']"));
+        userName.click();
+     Exception : NullPointer Exception
+
+ //number of options,multiple elements
+        List<WebElement> options = driver.findElements(By.xpath("//div[@id='react-select-2-group-0-heading']/following-sibling::div"));
+        System.out.println(options.size());
+        //get options name
+        for (WebElement optionsText:options)
+        {
+            System.out.println(optionsText.getText());
+        }
+        Exception : []
